@@ -1,0 +1,27 @@
+# players name input
+name = input("Enter your name: ")                                
+# game lessons
+print("Hello " + name +", glad to have you play.")              
+print("You will be tasked to pick a number between 1 and 100.")
+print("Be sure the number is even to win")
+
+# game loop to make sure the digits are between 1-100
+while True:                                                         
+    # player's number input
+    players_num = input("Enter a number: ")                         
+    # converts string to interger
+    int_player = int(players_num)                                   
+    # if statement to verify input is below 100
+    if int_player < 100:
+        # if statement to verify input is above 0
+        if int_player > 0: 
+         # checks to see if number is even or odd
+            if int_player % 2 == 0:
+                print("Congratulations " + name + "! You picked an even number!")
+            else:
+                print("Sorry " + name + ", you chose an odd number... Better luck next time!")      
+            break
+        else:
+            print("The number MUST be above 0. Please try again!")
+    else:
+        print("The number MUST be below 100. Please try again!")
